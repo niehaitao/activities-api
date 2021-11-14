@@ -33,6 +33,7 @@ func (a *App) Serve() error {
 
 func (a *App) GetSummary(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	activities, err := a.d.GetActivities()
 	if err != nil {
 		sendErr(w, http.StatusInternalServerError, err.Error())
