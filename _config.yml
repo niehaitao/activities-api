@@ -1,0 +1,76 @@
+remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+url                      : https://niehaitao.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+
+title: "Activities API Documentation"
+email: nie.haitao@gmail.com
+github_username: nie.haitao
+search: true
+search_full_content: true
+
+# Build settings
+markdown: kramdown
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+include:
+  - _pages
+
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
+author:
+  name   : "Haitao NIE"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Java Software Engineer for a decade then SRE since 2020"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://niehaitao.github.io"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/niehaitao"
+
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: splash
+      read_time: true
+      comments: true
+      share: false
+      related: false # YOU MAY ALSO ENJOY
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      classes: wide
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+atom_feed:
+  hide: true
+footer:
+  hide: true
